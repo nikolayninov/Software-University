@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+  <input type="text" id="num1" />
+  <input type="text" id="num2" />
+  <input type="text" id="result" readonly />
+  <br>
+  <button id="sumButton" onclick="sum()">Sum</button>
+  <button id="subtractButton" onclick="sub()">Subtract</button>
+
+  <script type="text/javascript">
+  function solution() {
+    let el1;
+    let el2;
+    let resEl;
+
+    function init(sel1,sel2,resultSel) {
+      el1 = $(sel1);
+      el2 = $(sel2);
+      resEl = $(resultSel);
+    };
+
+    function add() {
+      resEl.val(Number(el1.val()) + Number(el2.val()));
+    };
+
+    function subtract() {
+      resEl.val(Number(el1.val()) - Number(el2.val()));
+    }
+    return {init,add,subtract};
+  }
+  let obj = solution();
+  function sum() {
+    obj.init("#num1","#num2","#result");
+    obj.add();
+  };
+  function sub() {
+    obj.init("#num1","#num2","#result");
+    obj.subtract();
+  };
+  </script>
+</body>
+
+</html>

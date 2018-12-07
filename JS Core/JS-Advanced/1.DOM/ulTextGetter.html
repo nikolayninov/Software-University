@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <ul id="items">
+    <li>first item</li>
+    <li>second item</li>
+    <li>third item</li>
+  </ul>
+  <textarea id="result"></textarea>
+
+  <br>
+
+  <button onClick="extractText()">Extract Text</button>
+
+  <script type="text/javascript">
+    function extractText(){
+      let itemNodes = document.querySelectorAll("ul#items li");
+      let textarea = document.querySelector("#result");
+      let nodeTexts = [];
+      for (let node of itemNodes) {
+        nodeTexts.push(node.textContent);
+      }
+      textarea.value = nodeTexts.join("\n");
+    }
+  </script>
+
+</body>
+
+</html>

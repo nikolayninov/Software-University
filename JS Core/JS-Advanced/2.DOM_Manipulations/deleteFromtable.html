@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <table border="1" id="customers">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>eve@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Nick</td>
+      <td>nick@yahooo.com</td>
+    </tr>
+    <tr>
+      <td>Didi</td>
+      <td>didi@didi.net</td>
+    </tr>
+    <tr>
+      <td>Tedy</td>
+      <td>tedy@tedy.com</td>
+    </tr>
+  </table>
+  Email: <input type="text" name="email" />
+  <button onclick="deleteByEmail()">Delete</button>
+  <div id="result" />
+  <script type="text/javascript">
+    function deleteByEmail(){
+
+      let inputEmail = document.getElementsByName("email")[0].value;
+      let rows = document.getElementById("customers").children[0].children;
+      for(let i = 0; i < rows.length;i++) {
+        let row = rows[i];
+        if(row.children[1].textContent == inputEmail && inputEmail != "Email")
+        {
+            document.getElementById("customers").children[0].removeChild(row);
+            document.getElementById("result").textContent = "Deleted.";
+            document.getElementsByName("email")[0].value = "";
+
+        }
+        else {
+          document.getElementById("result").textContent = "Not found.";
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
