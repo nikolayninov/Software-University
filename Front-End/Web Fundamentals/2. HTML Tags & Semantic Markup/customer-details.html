@@ -1,0 +1,85 @@
+<html>
+
+<head>
+  <title>Tags Cardio - Forms</title>
+</head>
+<form action="#">
+  <fieldset>
+    <legend>Customer Details</legend>
+
+    <p>
+      <label for="first-name">First Name</label>
+      <input type="text" name="first-name" id="first-name" placeholder="George" autofocus>
+    </p>
+    <p>
+      <label for="last-name">Last Name</label>
+      <input type="text" name="last-name" id="last-name" placeholder="Devis">
+    </p>
+    <p>
+      <label for="male">Male</label>
+      <input type="radio" name="sex" id="male" checked>
+      <label for="female">Female</label>
+      <input type="radio" name="sex" id="female">
+      <label for="other">Other</label>
+      <input type="radio" name="sex" id="other">
+    </p>
+
+    <p>
+      Preferred contact method:
+      <label for="radio-email">Male</label>
+      <input type="radio" name="contact-method" id="radio-email" checked>
+      <label for="radio-phone">Female</label>
+      <input type="radio" name="contact-method" id="radio-phone">
+    </p>
+    <p>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="your@email.com">
+    </p>
+    <p>
+      <label for="phone">Phone</label>
+      <input type="tel" name="phone" id="phone" placeholder="+359888888888">
+    </p>
+    <p>
+      <label for="town">Town</label>
+      <select name="town" id="town">
+        <option value=""></option>
+        <option value="Varna">Varna</option>
+        <option value="Plovdiv">Plovdiv</option>
+        <option value="Burgas">Burgas</option>
+        <option value="Sofia">Sofia</option>
+        <option value="Pleven">Pleven</option>
+      </select>
+    </p>
+    <p>
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age" min="18" max="70">
+    </p>
+
+    <p>
+      Programming language
+      <select name="" id="">
+        <option value=""></option>
+        <option value="Java">Java</option>
+        <option value="PHP">PHP</option>
+        <option value="C#">C#</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Ruby">Ruby</option>
+        <option value="Other">Other</option>
+      </select>
+    </p>
+    <p>
+      <textarea name="moreinfo" id="moreinfo" placeholder="More information..."></textarea>
+    </p>
+    <p>
+      <input type="checkbox" name="tandc" id="tandc"><label for="tandc">I agree the Terms and Conditions</label>
+    </p>
+    <p>
+      <input type="submit" value="Send">
+      <input type="reset">
+    </p>
+
+  </fieldset>
+</form>
+
+</html>
